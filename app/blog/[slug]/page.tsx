@@ -1,76 +1,63 @@
-import { getArticleFromSlug } from '@/src/infrastructure/file-managment/mdx-file-repository';
-import { serialize } from "next-mdx-remote/serialize";
+import { getArticleFromSlug, getSlug } from '@/src/infrastructure/file-managment/mdx-file-repository';
 import React from 'react'
 import { MdxContent } from './MdxContent';
-import { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { GetStaticPaths } from 'next';
+import readingTime from 'reading-time';
+import dayjs from 'dayjs';
+import { Metadata } from '@/src/domain/Article';
 
-type Frontmatter = {
-  title: string;
-  publishedAt: string;
-  excerpt: string;
-  cover_image: string;
-};
- 
-type Post<TFrontmatter> = {
-  serialized: MDXRemoteSerializeResult;
-  frontmatter: TFrontmatter;
-};
 
 export default async function BlogsPage({params} :any) {
-  let article
-  try{
-    article = await getArticle(params.slug) as any
-  }catch(e){
-    return(
-      <h1>Not found</h1>
-    )
+
+  const article = await getArticle(params.slug)
+
+  if (article === null){
+    <h1>NOT FOUND</h1>
   }
 
-  const raw = await getArticleFromSlug("solid");
-  // console.log( article )
+  const {metadata, serialized} = article!;
+
   return (
-    <React.Fragment>
-      {/* <Head>
-        <title>{frontmatter.title} | My blog</title>
-      </Head> */}
+    <>
       <div className="article-container">
-        <h1 className="article-title">frontmatter.title {params.slug} </h1>
+        <h1 className="article-title">{metadata.title} </h1>
         <p className="publish-date">
-          {/* {dayjs(frontmatter.publishedAt).format('MMMM D, YYYY')} &mdash;{' '}
-          {frontmatter.readingTime} */}
+          {metadata.publishedAt} &mdash;{' '}
+          {metadata.readTime}
         </p>
         <div className="content">
         
-        <MdxContent source={article.serialized} />
+        <MdxContent source={serialized} />
 
         </div>
       </div>
 
-    </React.Fragment>
+    </>
   )
 }
 
 export async function generateStaticParams() {
-  return [{ slug: 'solid' }, { slug: 'ejemplo' }]
+  const slugs = getSlug();
+  return  slugs.map(((e) => { return {slug: e}}))
 }
 
-async function getArticle(slug:any) {
-  //fetch the particular file based on the slug
-  const raw = await getArticleFromSlug(slug);
-  // console.log(raw)
+async function getArticle(slug:string) {
 
-  const serialized = await serialize(raw, {
-    parseFrontmatter: true,
-  });  
+  const serialized = await getArticleFromSlug(slug);
 
-  console.log(serialized)
-  console.log(serialized.frontmatter)
-
-  const frontmatter = serialized.frontmatter as Frontmatter;  //add reeding time
+  if(serialized === null){
+    return null
+  }
+  
+  const metadata: Metadata = {
+    title: serialized.frontmatter.title,
+    excerpt: serialized.frontmatter.excerpt,
+    coverImage: serialized.frontmatter.cover_image,
+    publishedAt: dayjs(serialized.frontmatter.published_at).format("D MMMM YYYY"),
+    readTime: readingTime(serialized.compiledSource).text,
+  }
 
   return {
-    frontmatter,
+    metadata,
     serialized,
   };
 }

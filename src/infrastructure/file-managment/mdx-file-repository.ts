@@ -1,13 +1,15 @@
 import path from 'path'
 import fs from 'fs' //use promise version
-import matter from 'gray-matter'
-import readingTime from 'reading-time'
 import { sync } from 'glob'
+import { serialize } from 'next-mdx-remote/serialize'
+import { Frontmatter, Post } from '@/src/domain/Article'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
+import rehypeHighlight from "rehype-highlight";
 
 const articlesRelativePath = 'data/articles'
 const articlesPath = path.join(process.cwd(), articlesRelativePath)
 
-export async function getSlug() {
+export function getSlug(): string[] {
   const paths = sync(`${articlesPath}/*.mdx`)
 
   return paths.map((path) => {
@@ -20,45 +22,25 @@ export async function getSlug() {
   })
 }
 
-// dsflkj
-export async function getArticleFromSlug(slug: string) {
+export async function getArticleFromSlug(slug: string): Promise<MDXRemoteSerializeResult<Post<Frontmatter>, Frontmatter> | null> {
+
   const articleDir = path.join(articlesPath, `${slug}.mdx`)
-  const source = fs.readFileSync(articleDir)
-  return source;
-  // const { content, data } = matter(source)
 
-  // return {
-  //   content,
-  //   frontmatter: {
-  //     slug,
-  //     excerpt: data.excerpt,
-  //     title: data.title,
-  //     publishedAt: data.publishedAt,
-  //     readingTime: readingTime(source.toString()).text,
-  //     ...data,
-  //   },
-  // }
-}
-
-// get the path that stores all the articles or blog post
-export async function getAllArticles(): Promise<Array<Article>> {
-  const articles = fs.readdirSync(path.join(process.cwd(), articlesRelativePath));
-
-  return articles.reduce((allArticles: any, articleSlug) => {
-    // get parsed data from mdx files in the "articles" dir
-    const source = fs.readFileSync(
-      path.join(process.cwd(), articlesRelativePath, articleSlug),
-      "utf-8"
-    );
-    const { data } = matter(source);
-
-    return [
-      {
-        ...data,
-        slug: articleSlug.replace(".mdx", ""),
-        readingTime: readingTime(source).text,
+  try {
+    const raw = fs.readFileSync(articleDir)
+    const serialized = await serialize<Post<Frontmatter>, Frontmatter>(raw, {
+      parseFrontmatter: true,
+      mdxOptions: {
+        rehypePlugins: [
+          rehypeHighlight,
+        ],
       },
-      ...allArticles,
-    ];
-  }, []);
+    });
+    return serialized
+
+  } catch (e) {
+    console.log(e)
+    return null
+  }
+
 }

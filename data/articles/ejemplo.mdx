@@ -1,6 +1,6 @@
 ---
 title: "Example"
-publishedAt: "2022-02-16"
+published_at: "2022-02-16"
 excerpt: "example "
 cover_image: "path/to/where/image/is/stored"
 ---
@@ -12,6 +12,18 @@ This is an example post.
  
 ## Heading 2
  
+ This is an `inline code`
+
+Below is an example of a codeblock
+
+```js
+let name = "MDX Blog";
+
+console.log(name);
+```
+
+
+
 ### Heading 3
  
 #### Heading 4
@@ -21,13 +33,21 @@ This is an example post.
 
 ejemplo de `codigo` en linea
 
+## Code Example
 
-```
-ejemplo de codigo con muchas lineas
+```ts
+// ejemplo de codigo con muchas lineas
 
 for(let i = 1; 1 < 10; 1++){
   console.log('hola')
 }
+
+export interface Frontmatter {
+  title: string;
+  published_at: string;
+  excerpt: string;
+  cover_image: string;
+};
 
 ```
 
