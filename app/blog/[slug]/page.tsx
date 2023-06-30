@@ -1,11 +1,33 @@
 import { getArticleFromSlug } from '@/src/infrastructure/file-managment/mdx-file-repository';
-import Image from "next/image";
-import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from "next-mdx-remote/serialize";
 import React from 'react'
+import { MdxContent } from './MdxContent';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { GetStaticPaths } from 'next';
+
+type Frontmatter = {
+  title: string;
+  publishedAt: string;
+  excerpt: string;
+  cover_image: string;
+};
+ 
+type Post<TFrontmatter> = {
+  serialized: MDXRemoteSerializeResult;
+  frontmatter: TFrontmatter;
+};
 
 export default async function BlogsPage({params} :any) {
-  const article = await getPost(params.slug) as any
+  let article
+  try{
+    article = await getArticle(params.slug) as any
+  }catch(e){
+    return(
+      <h1>Not found</h1>
+    )
+  }
+
+  const raw = await getArticleFromSlug("solid");
   // console.log( article )
   return (
     <React.Fragment>
@@ -19,23 +41,38 @@ export default async function BlogsPage({params} :any) {
           {frontmatter.readingTime} */}
         </p>
         <div className="content">
-        <MDXRemote source={article} components={{ Image }} />
+        
+        <MdxContent source={article.serialized} />
+
         </div>
       </div>
+
     </React.Fragment>
   )
 }
 
-async function getPost(slug:any) {
-  //fetch the particular file based on the slug
-  // const { slug } = params;
-  const { content, frontmatter } = await getArticleFromSlug(slug);
-  console.log(content)
+export async function generateStaticParams() {
+  return [{ slug: 'solid' }, { slug: 'ejemplo' }]
+}
 
-  const mdxSource = await serialize(content);
+async function getArticle(slug:any) {
+  //fetch the particular file based on the slug
+  const raw = await getArticleFromSlug(slug);
+  // console.log(raw)
+
+  const serialized = await serialize(raw, {
+    parseFrontmatter: true,
+  });  
+
+  console.log(serialized)
+  console.log(serialized.frontmatter)
+
+  const frontmatter = serialized.frontmatter as Frontmatter;  //add reeding time
 
   return {
-        source: mdxSource,
-        frontmatter,
+    frontmatter,
+    serialized,
   };
 }
+
+
