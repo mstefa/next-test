@@ -1,4 +1,4 @@
-.title {
+.container {
   padding: 6rem 0rem 10rem 4rem;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
     }
   }
 
-  .h1title {
+  h1 {
     font-size: 5rem;
     margin: 0.5rem 0 0 0;
     padding: 0;
@@ -23,7 +23,7 @@
     animation-name: slideInX;
   }
 
-  .h3title {
+  h3 {
     font-size: 3rem;
     color: var(--lightRed);
     margin: 0 0 1rem 0;
@@ -32,13 +32,13 @@
 
   }
 
-  .spantitle {
+  span {
     color: var(--lightTel);
     animation-duration: var(--animationTime);
     animation-name: slideInX;
   }
 
-  /* @media (max-width: 850px) {
+  @media (max-width: 850px) {
 
     padding: 5rem 0rem 8rem 1rem;
 
@@ -50,7 +50,7 @@
       font-size: 2.5rem;
     }
 
-  } */
+  }
 
   @media (max-width: 450px) {
 

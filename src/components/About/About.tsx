@@ -1,14 +1,12 @@
 import React from 'react'
-import mstefa from '../../resources/CV.JPG'
-import { StyledAbout } from './StyledAbout'
-import { StyledMainButton } from "../../GlobalStyles";
+import styles from './about.module.scss'
 
 export default function About() {
   return (
-    <StyledAbout>
-      <h2 id='about'> <i class="far fa-paper-plane"></i> About Me</h2>
+    <section className={styles.aboutSection} >
+      <h2 id='about'> <i className="far fa-paper-plane"></i> About Me</h2>
       <div >
-        <div className='textContainer'>
+        <div>
           <p>
             Before joining the world of tech, I studied and worked as an aeronautical engineer. I first fell in love with coding
             in high school where we developed some simple’s apps on Visual Basic 🤔.
@@ -38,13 +36,14 @@ export default function About() {
 
 
         </div>
-        <div className='imgContainer'>
+        <div className={styles.imgContainer}>
           <img src='https://mstefanutti-site.s3.us-east-2.amazonaws.com/CV2.jpeg' alt='profile'></img>
-          <a href='https://mstefanutti-site.s3.us-east-2.amazonaws.com/MatiasStefanuttiResume.pdf' target="blank" > <StyledMainButton >Resume</StyledMainButton> </a>
+          {/* <a href='https://mstefanutti-site.s3.us-east-2.amazonaws.com/MatiasStefanuttiResume.pdf' target="blank" > <StyledMainButton >Resume</StyledMainButton> </a> */}
+          <a href='https://mstefanutti-site.s3.us-east-2.amazonaws.com/MatiasStefanuttiResume.pdf' target="blank" > <button >Resume</button> </a>
 
         </div>
       </div>
 
-    </StyledAbout>
+    </section>
   )
 }

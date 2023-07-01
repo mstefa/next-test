@@ -8,26 +8,11 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from "next/link"
-import { getAllArticles } from '../../src/infrastructure/file-managment/mdx-file-repository'
+import { getArticlesMetadata } from '../../src/application/article.service'
 import dayjs from 'dayjs';
 
-const getArticles = async (): Promise<Array<Article>>  =>  {
-  const articles = await getAllArticles()
-
-  articles
-    .map((article) => article.data)
-    .sort((a, b) => {
-      if (a.data.publishedAt > b.data.publishedAt) return 1
-      if (a.data.publishedAt < b.data.publishedAt) return -1
-
-      return 0
-    })
-
-  return articles.reverse();
-};
-
 export default async function ListOfBlogsPage() {
-  const posts = await getArticles();
+  const articlesMetadata = await getArticlesMetadata()
   return (
     <React.Fragment>
       <Head>
@@ -35,16 +20,16 @@ export default async function ListOfBlogsPage() {
       </Head>
       <div>
         <h1>My Blog</h1>
-        {posts.map((frontMatter :any) => {
+        {articlesMetadata.map((metadata) => {
           return (
-            <Link key={frontMatter.title} href={`/blog/${frontMatter.slug}`} passHref>
+            <Link key={metadata.title} href={`/blog/${metadata.slug}`} passHref>
               <div>
-                <h1 className="title">{frontMatter.title}</h1>
-                <p className="summary">{frontMatter.excerpt}</p>
+                <h2 className="title">{metadata.title}</h2>
+                <p className="summary">{metadata.excerpt}</p>
                 <p className="date">
-                  {dayjs(frontMatter.publishedAt).format('MMMM D, YYYY')} &mdash;{' '}
+                  {dayjs(metadata.publishedAt).format('MMMM D, YYYY')} &mdash;{' '}
                   
-                  {frontMatter.readingTime}
+                  {metadata.readTime}
                 </p>
               </div>
             </Link>
