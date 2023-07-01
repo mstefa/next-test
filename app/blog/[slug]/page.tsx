@@ -1,9 +1,7 @@
-import { getArticleFromSlug, getSlug } from '@/src/infrastructure/file-managment/mdx-file-repository';
+import { getSlug } from '@/src/infrastructure/file-managment/mdx-file-repository';
 import React from 'react'
 import { MdxContent } from './MdxContent';
-import readingTime from 'reading-time';
-import dayjs from 'dayjs';
-import { Metadata } from '@/src/domain/Article';
+import { getArticleBySlug } from '@/src/application/article.service';
 
 
 export default async function BlogsPage({params} :any) {
@@ -41,25 +39,7 @@ export async function generateStaticParams() {
 }
 
 async function getArticle(slug:string) {
-
-  const serialized = await getArticleFromSlug(slug);
-
-  if(serialized === null){
-    return null
-  }
-  
-  const metadata: Metadata = {
-    title: serialized.frontmatter.title,
-    excerpt: serialized.frontmatter.excerpt,
-    coverImage: serialized.frontmatter.cover_image,
-    publishedAt: dayjs(serialized.frontmatter.published_at).format("D MMMM YYYY"),
-    readTime: readingTime(serialized.compiledSource).text,
-  }
-
-  return {
-    metadata,
-    serialized,
-  };
+  return getArticleBySlug(slug)
 }
 
 

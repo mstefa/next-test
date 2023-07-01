@@ -44,3 +44,26 @@ export async function getArticleFromSlug(slug: string): Promise<MDXRemoteSeriali
   }
 
 }
+
+// // get the path that stores all the articles or blog post
+// export async function getAllArticles(): Promise<Array<Article>> {
+//   const articles = fs.readdirSync(path.join(process.cwd(), articlesRelativePath));
+
+//   return articles.reduce((allArticles: any, articleSlug) => {
+//     // get parsed data from mdx files in the "articles" dir
+//     const source = fs.readFileSync(
+//       path.join(process.cwd(), articlesRelativePath, articleSlug),
+//       "utf-8"
+//     );
+//     const { data } = matter(source);
+
+//     return [
+//       {
+//         ...data,
+//         slug: articleSlug.replace(".mdx", ""),
+//         readingTime: readingTime(source).text,
+//       },
+//       ...allArticles,
+//     ];
+//   }, []);
+// }

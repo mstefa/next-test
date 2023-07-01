@@ -21,7 +21,8 @@ export interface Post<TFrontmatter> {
   frontmatter: TFrontmatter;
 };
 
-export interface Metadata {
+export interface ArticleMetadata {
+  slug: string;
   title: string;
   excerpt: string;
   coverImage: string;
