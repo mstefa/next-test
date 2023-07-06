@@ -1,0 +1,72 @@
+.navBar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  //top:${props => props.top }; TODO//
+  background-color: var(--backgroundRed30opacity);
+  transition: top 0.5s;
+
+  @keyframes fade {
+    from {
+      opacity: 0%;
+    }
+
+    to {
+      opacity: 100%;
+    }
+  }
+
+  a {
+    margin: 0.5rem 0 0.5rem 2rem;
+    animation-duration: var(--animationTime);
+    animation-name: fade;
+  }
+
+  ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    margin-right: 4rem;
+    font-size: 1.1rem;
+
+    li {
+      margin-left: 2rem;
+      padding: 0 0.1rem;
+      animation-duration: var(--animationTime);
+      animation-name: fade;
+
+      a:hover {
+        color: var(--lightTel);
+        transition: all 500ms ease;
+      }
+
+      ::before {
+        content: '> ';
+        color: var(--lightTel);
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    ul {
+      margin-right: 1rem;
+
+      li {
+        ::before {
+          content: none;
+          padding: 0;
+        }
+
+      }
+    }
+  }
+
+  &Hidden {
+    @extend .navBar;
+    top: -5rem;
+    transition: top 0.5s;
+  }
+}
