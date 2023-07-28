@@ -13,6 +13,7 @@ export interface IconProps {
 }
 
 export const Icon = ({ size = "medium", icon,}: IconProps) => {
+  // TODO: check size not working
   return (
     <span className={styles[`icon--${size}`]}>
       {icons[icon]()}

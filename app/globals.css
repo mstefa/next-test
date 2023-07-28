@@ -1,5 +1,9 @@
 :root {
 
+  /* TODO */
+  --tabHeigth: 2.5rem;
+  --tabHighlightWidth: 0.15rem;
+  --tabWidth: 10rem;
 
   --mainRed: #820801;
   --darkRed: #4F0501;
@@ -26,6 +30,11 @@
   --fzxl: 30px;
   --fzxxl: 32px;
   --fzheading: 42px;
+
+  --tabHeigth: 2.5rem;
+  --tabHighlightWidth: 0.15rem;
+  --tabWidth: 10rem;
+
 
   --max-width: 1100px;
   --border-radius: 12px;

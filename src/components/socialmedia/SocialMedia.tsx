@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './styledSocialMedia.module.scss'
 // import Image from 'next/image'
-import Linkedin from './linkedin.svg'
 import { Icon } from '../icon/Icon'
 // import { linkedin } from '@/src/resources/icons'
 

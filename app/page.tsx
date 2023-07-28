@@ -4,6 +4,7 @@ import Presentation from '../src/components/presentation/Presentation'
 import NavBar from '@/src/components/navBar/NavBar';
 import SocialMedia from '@/src/components/socialmedia/SocialMedia';
 import { Icon } from '@/src/components/icon/Icon';
+import Jobs from '@/src/components/jobs/Jobs';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <NavBar/>
       <Presentation/>
       <About></About>
+      <Jobs></Jobs>
       <section>
         <Icon size="small" icon="linkedin"></Icon>
         hola
