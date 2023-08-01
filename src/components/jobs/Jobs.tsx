@@ -45,7 +45,7 @@ export default function Jobs() {
               const  company  = e.company;
               return (
                 <div className={activeTabId===i ? styles.tabButtonActive : styles.tabButton }
-                  key={i}
+                  key={e.id}
                   onClick={() => setActiveTabId(i)}
                   id={`tab-${i}`}
                   role="tab"

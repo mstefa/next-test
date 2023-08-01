@@ -1,5 +1,6 @@
 [
   {
+    "id": 5,
     "company": "InnoIT Consulting",
     "title": "SSr Backend Developer",
     "companyWebSite": "https://www.linkedin.com/company/innoit-consulting/",
@@ -32,6 +33,7 @@
     ]
   },
   {
+    "id": 4,
     "company": "Settle Network",
     "title": "SSr Backend Developer",
     "companyWebSite": "https://www.settlenetwork.com/",
@@ -61,6 +63,7 @@
     ]
   },
   {
+    "id": 3,
     "company": "Mercado Libre",
     "title": "Software Engineer Analyst",
     "companyWebSite": "https://mercadolibre.com/",
@@ -96,6 +99,7 @@
     ]
   },
   {
+    "id": 2,
     "company": "Henry",
     "title": "Teaching Assistant",
     "companyWebSite": "https://www.soyhenry.com/",
@@ -125,6 +129,7 @@
     ]
   },
   {
+    "id": 1,
     "company": "Previous Experience",
     "title": "Aeronautical Engineer",
     "companyWebSite": "",

@@ -2,15 +2,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   // width: var(--icon-size);
   // height: var(--icon-size);
-  width: 10rem;
-  height: 10rem;
 
-  >svg {
+  width: 2500rem;
+
+  svg {
     width: 100%;
     height: 100%;
+    color: red;
+    width: 2500rem !important;
+
   }
 
   &--small {

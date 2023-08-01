@@ -3,9 +3,9 @@ import About from '@/src/components/about/About'
 import Presentation from '../src/components/presentation/Presentation'
 import NavBar from '@/src/components/navBar/NavBar';
 import SocialMedia from '@/src/components/socialmedia/SocialMedia';
-import { Icon } from '@/src/components/icon/Icon';
 import Jobs from '@/src/components/jobs/Jobs';
 import Projects from '@/src/components/projects/Projects';
+import Contact from '@/src/components/contact/Contact';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <About></About>
       <Jobs></Jobs>
       <Projects></Projects>
-      <About></About>
+      <Contact></Contact>
       <SocialMedia></SocialMedia>
       <footer>
         Designed & Built by Matías Stefanutti

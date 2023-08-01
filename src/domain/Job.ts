@@ -1,4 +1,5 @@
 export default interface JobData {
+  id: string,
   company: string,
   title: string,
   companyWebSite: string,
