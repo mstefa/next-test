@@ -27,7 +27,7 @@ const MainProject: FunctionComponent<MainProjectProps> = (props) =>{
           {project.technologies.map((tec) => <li key={tec}>{tec}</li>)}
         </ul>
         {project.repository ? <a href={project.repository} target="blank" > <i> <Icon size="small" icon="linkedin"></Icon> </i>     </a> : <></>}
-        {project.page ? <a href={project.page} target="blank" > <i> <Icon size="xl" icon="linkedin"></Icon></i> </a> : <></>}
+        {project.page ? <a href={project.page} target="blank" > <i> <Icon size="small" icon="link"></Icon></i> </a> : <></>}
       </div>
 
     </div>

@@ -8,7 +8,7 @@ export default function Projects() {
 
   const projects = getProjects();
   return (
-    <div className={styles.projectsContainer}>
+    <section className={styles.projectsContainer}>
       <h2 id='projects'>Some Things I’ve Built</h2>
       {projects.map(project => {
         if (project.show && project.main) {
@@ -16,6 +16,6 @@ export default function Projects() {
         } 
       }
       )}
-    </div>
+    </section>
   )
 }

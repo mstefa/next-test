@@ -38,7 +38,7 @@ export default function Jobs() {
 
   return (
     <section className={styles.jobSection }>
-        <h2 id='projects'> Where I’ve Worked</h2>
+        <h2 id='jobs'> Where I’ve Worked</h2>
         <div className={styles.inner }>
           <div className={styles.tabList }>
           {jobsData && jobsData.map((e, i) => {

@@ -1,5 +1,6 @@
 .navBar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -67,6 +68,6 @@
   &Hidden {
     @extend .navBar;
     top: -5rem;
-    transition: top 0.5s;
+    transition: top 1s;
   }
 }

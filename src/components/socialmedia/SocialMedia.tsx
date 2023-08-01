@@ -12,6 +12,9 @@ export default function SocialMedia() {
         <li> <a href='https://github.com/mstefa' target="blank" > <Icon size="medium" icon="linkedin"></Icon> </a>  </li>
         <li> <a href='https://github.com/mstefa' target="blank" > <Icon size="medium" icon="github"></Icon> </a>  </li>
         <li> <a href='https://twitter.com/mstefanutti' target="blank" > <Icon size="medium" icon="twitter"></Icon> </a>  </li>
+        <a href='mailto:mstefanutti24@gmail.com' target="blank" > 
+          <i className={styles.emailIcon} > <Icon size="medium" icon="email"></Icon> </i>
+        </a>
         <li> <div className={styles.line}></div> </li>
       </ul>
 

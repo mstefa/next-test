@@ -7,10 +7,12 @@ import chevronRight from "./chevron-right.svg";
 import chevronUp from "./chevron-up.svg";
 import close from "./close.svg";
 import codely from "./codely.svg";
+import email from "./email.svg"
 import facebook from "./facebook.svg";
 import github from "./github.svg";
 import info from "./info.svg";
 import instagram from "./instagram.svg";
+import link from "./link.svg";
 import linkedin from "./linkedin.svg";
 import menu from "./menu.svg";
 import play from "./play.svg";
@@ -28,10 +30,12 @@ export {
   chevronUp,
   close,
   codely,
+  email,
   facebook,
   github,
   info,
   instagram,
+  link,
   linkedin,
   menu,
   play,

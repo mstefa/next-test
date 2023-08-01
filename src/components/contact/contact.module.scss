@@ -15,19 +15,23 @@
       margin: 2rem auto;
     }
 
+    .emailIcon {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+    }
+
+    i {
+      padding: 1rem;
+    }
+
     a {
       font-size: 1.5rem;
       color: var(--lightGray);
       /* margin: 20rem auto; */
-
-      .fab {
-        padding: 1rem;
-        font-size: 2rem;
-      }
-
-      .fas {
-        padding: 0.5rem 1.2rem;
-      }
+      margin: 0;
+      padding: 0;
 
       :hover {
         color: var(--lightTel);

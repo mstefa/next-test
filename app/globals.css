@@ -9,7 +9,7 @@
   --darkRed: #4F0501;
   --ultraDarkRed: #2f0d0a;
   --backgroundRed: #111010;
-  --backgroundRed30opacity: #1110104d;
+  --backgroundRed30opacity: #111010ae;
   --lightRed: #CF4740;
   --lightTel: #17CFC5;
   --darkTel: #06625C;
@@ -138,4 +138,15 @@ a {
 section {
   width: 80vw;
   margin: 1rem 10vw 0rem 10vw;
+}
+
+.mainButton {
+
+  background-color: var(--backgroundRed);
+  color: var(--lightTel);
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border: 0.08rem solid var(--lightTel);
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
