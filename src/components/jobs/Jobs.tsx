@@ -44,7 +44,7 @@ export default function Jobs() {
           {jobsData && jobsData.map((e, i) => {
               const  company  = e.company;
               return (
-                <div className={activeTabId===i ? styles.tabButtonActive : styles.tabButton }
+                <button className={activeTabId===i ? styles.tabButtonActive : styles.tabButton }
                   key={e.id}
                   onClick={() => setActiveTabId(i)}
                   id={`tab-${i}`}
@@ -53,7 +53,7 @@ export default function Jobs() {
                   aria-selected={activeTabId === i ? true : false}
                   aria-controls={`panel-${i}`}>
                   <span>{company}</span>
-                </div>
+                </button>
               );
             })}
             <div className={styles.highlight} />

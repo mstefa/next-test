@@ -2,6 +2,7 @@
   padding: 6rem 0rem 10rem 4rem;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 
   @keyframes slideInX {
     from {
@@ -16,16 +17,24 @@
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: var(--fzheading);
+    color: var(--fg-default);
     margin: 0.5rem 0 0 0;
-    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    // background-image: var(--secondary-glow);
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -moz-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // -moz-text-fill-color: transparent;
     animation-duration: var(--animationTime);
     animation-name: slideInX;
   }
 
   h3 {
     font-size: 3rem;
-    color: var(--lightRed);
+    color: var(--fg-default);
     margin: 0 0 1rem 0;
     animation-duration: var(--animationTime);
     animation-name: slideInX;
@@ -33,7 +42,9 @@
   }
 
   span {
-    color: var(--lightTel);
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    color: var(--fg-default);
     animation-duration: var(--animationTime);
     animation-name: slideInX;
   }

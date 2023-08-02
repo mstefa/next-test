@@ -6,6 +6,7 @@ import SocialMedia from '@/src/components/socialmedia/SocialMedia';
 import Jobs from '@/src/components/jobs/Jobs';
 import Projects from '@/src/components/projects/Projects';
 import Contact from '@/src/components/contact/Contact';
+import { Footer } from '@/src/components/footer/Footer';
 
 export default function Home() {
   return (
@@ -17,9 +18,7 @@ export default function Home() {
       <Projects></Projects>
       <Contact></Contact>
       <SocialMedia></SocialMedia>
-      <footer>
-        Designed & Built by Matías Stefanutti
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }
