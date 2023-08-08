@@ -7,6 +7,5 @@
      viewBox="0 0 100 100"
      preserveAspectRatio="xMidYMid meet"
 >
-    <path d="M50,75l32.1,7.1L50,17.9,17.9,82.1Zm0,0V46.4" fill="currentColor" class="svg-stroke-primary" stroke-linecap="round"
-      stroke-linejoin="round" stroke-width="8"/>
+<path d="M53.6,19.9a4,4,0,0,0-7.2,0L18.1,76.5a4,4,0,0,0,4.7,5.7L43,76.4a4.1,4.1,0,0,0,3-3.9V54a4,4,0,0,1,8,0V72.5a4.1,4.1,0,0,0,3,3.9l20.2,5.8a4,4,0,0,0,4.7-5.7Z" fill="currentColor"  transform="rotate(90 50 50)" />
 </svg>

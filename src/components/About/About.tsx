@@ -5,8 +5,7 @@ import { Icon } from '../icon/Icon'
 export default function About() {
   return (
     <section className={styles.aboutSection} >
-      <h2 id='about'> <Icon icon='paperPlane'></Icon> About Me</h2>
-      <Icon icon='paperPlane'></Icon>
+      <h2  id='about'> <Icon icon='paperPlane'></Icon> About Me</h2>
       <div >
         <div className={styles.textContainer}>
           <p>

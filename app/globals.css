@@ -153,7 +153,8 @@ section {
 
   h2 {
     font-size: 1.8rem;
-    color: var(--fg-default)
+    color: var(--fg-default);
+    display: flexs
   }
 
   p {
