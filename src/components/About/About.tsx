@@ -1,43 +1,28 @@
 import React from 'react'
 import styles from './about.module.scss'
+import { Icon } from '../icon/Icon'
 
 export default function About() {
   return (
     <section className={styles.aboutSection} >
-      <h2 id='about'> <i className="far fa-paper-plane"></i> About Me</h2>
+      <h2 id='about'> <Icon icon='paperPlane'></Icon> About Me</h2>
+      <Icon icon='paperPlane'></Icon>
       <div >
-        <div>
+        <div className={styles.textContainer}>
           <p>
-            Before joining the world of tech, I studied and worked as an aeronautical engineer. I first fell in love with coding
-            in high school where we developed some simple’s apps on Visual Basic 🤔.
-            In college, I always went around developing software for mechanics and aerodynamics calculus, as I did on
-            my <a href='https://ieeexplore.ieee.org/document/7585325' target="blank">thesis</a>.
+            I am an experienced Software Engineer, adept at creating exceptional platforms that offer exceptional user experiences. My expertise lies in backend development, where I've utilized languages such as <b>TypeScript</b>, <b>GoLang</b>, and <b>Java </b> to architect innovative microservices. Additionally, I possess frontend proficiency with <b>React</b>. I'm motivated for  elevate platform quality and performance while cultivating robust customer relationships through cutting-edge solutions.
           </p>
           <p>
-            After working in some of first line companies as a Team Leader Engineer designing and maintaining mechanical assets,
-            I decided to come back to codding and I joined the <a href='https://www.soyhenry.com/' target="blank">Henry bootcamp</a>.
-            Now I enjoy building a variety of digital experiences 😄.
-          </p>
+            From my root as an aeronautical engineer, my journey has been a transformative one, molding me into a versatile Software Engineer. On my journey, I got the chance to dive into the role of a Teaching Assistant, mentoring emerging talents and guiding into the development world. My focus on effective leadership and ability to adapt to various cultures have consistently led to successful outcomes across a wide range of domains. 
+            </p>
           <p>
-            As a full-stack developer, I care about producing software that is both, durable and useful.
-            Here are a few technologies I&aposve been working with:
+            <b><a  href='https://www.linkedin.com/in/matiasstefanutti/' target="blank" >Let's connect </a></b> to explore new horizons and drive transformative tech solutions.
           </p>
-
-          <ul>
-            <li>JavaScript</li>
-            <li>TypeScipt</li>
-            <li>Node.js</li>
-            <li>React.js</li>
-            <li>Redux</li>
-            <li>Express</li>
-            <li>Sequelize</li>
-            <li>GraphQl</li>
-          </ul>
 
 
         </div>
         <div className={styles.imgContainer}>
-          <img src='https://mstefanutti-site.s3.us-east-2.amazonaws.com/CV2.jpeg' alt='profile'></img>
+          <img src='/images/profilePic.webp' alt='profile'></img>
           <a href='https://mstefanutti-site.s3.us-east-2.amazonaws.com/MatiasStefanuttiResume.pdf' target="blank" > <button className='mainButton' >Resume</button> </a>
 
         </div>

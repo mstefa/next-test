@@ -135,7 +135,7 @@ section {
 
 .mainButton {
 
-  background-color: var(--backgroundRed);
+  background-color: var(--bg-onEmphasis);
   color: var(--lightTel);
   font-size: 1rem;
   padding: 0.8rem 1.6rem;
@@ -153,6 +153,7 @@ section {
 
   h2 {
     font-size: 1.8rem;
+    color: var(--fg-default)
   }
 
   p {

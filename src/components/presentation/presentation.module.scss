@@ -1,5 +1,5 @@
 .container {
-  padding: 6rem 0rem 10rem 4rem;
+  padding: 6rem 0rem 10rem 0rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -34,7 +34,7 @@
 
   h3 {
     font-size: 3rem;
-    color: var(--fg-default);
+    color: var(--fg-accent2);
     margin: 0 0 1rem 0;
     animation-duration: var(--animationTime);
     animation-name: slideInX;
@@ -65,7 +65,37 @@
 
   @media (max-width: 450px) {
 
-    padding: 5rem 0rem 8rem 1rem;
+    padding: 5rem 0rem 8rem 0rem;
 
+  }
+}
+
+.arrow {
+  // text-align: center;
+  // justify-content: center;
+  // width: 100%;
+
+  margin: auto;
+  // position: absolute;
+  top: 90%;
+  // animation: pulse 1s infinite;
+  animation: var(--animationTime) infinite alternate bounce;
+  // svg {
+  //   animation-name: ;
+  //   animation-duration: 1s;
+  //   animation-iteration-count: infinite;
+  // }
+
+  // -ms-transform: translateY(-50%);
+  // transform: translateY(-50%);
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(10px);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }

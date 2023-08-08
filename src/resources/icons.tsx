@@ -15,6 +15,7 @@ import instagram from "./instagram.svg";
 import link from "./link.svg";
 import linkedin from "./linkedin.svg";
 import menu from "./menu.svg";
+import paperPlane from "./paper-plane.svg";
 import play from "./play.svg";
 import tiktok from "./tiktok.svg";
 import twitch from "./twitch.svg";
@@ -38,6 +39,7 @@ export {
   link,
   linkedin,
   menu,
+  paperPlane,
   play,
   tiktok,
   twitch,

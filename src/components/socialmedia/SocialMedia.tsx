@@ -9,7 +9,7 @@ export default function SocialMedia() {
     <nav className={styles.socialMediaNav}>
       <ul>
 
-        <li> <a href='https://github.com/mstefa' target="blank" > <Icon size="medium" icon="linkedin"></Icon> </a>  </li>
+        <li>  <a href='https://www.linkedin.com/in/matiasstefanutti/' target="blank" > <Icon size="medium" icon="linkedin"></Icon> </a>  </li>
         <li> <a href='https://github.com/mstefa' target="blank" > <Icon size="medium" icon="github"></Icon> </a>  </li>
         <li> <a href='https://twitter.com/mstefanutti' target="blank" > <Icon size="medium" icon="twitter"></Icon> </a>  </li>
         <a href='mailto:mstefanutti24@gmail.com' target="blank" > 
