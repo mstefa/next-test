@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   z-index: 1;
+
   background-color: color-mix(in srgb, var(--bg-default) 90%, transparent);
   transition: top 0.5s;
 
@@ -52,23 +53,77 @@
     }
   }
 
-  @media (max-width: 850px) {
-    ul {
-      margin-right: 1rem;
-
-      li {
-        ::before {
-          content: none;
-          padding: 0;
-        }
-
-      }
-    }
-  }
 
   &Hidden {
     @extend .navBar;
     top: -5rem;
     transition: top 1s;
   }
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+  background-color: var(--bg-default);
+  color: var(--fg-default)
+}
+
+
+.navigationMenuHiden {
+  @extend .navigationMenu;
+
+  // display: none;
+  @media(max-width: 850px) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+  }
+}
+
+.navigationMenuExpanded {
+  @extend .navigationMenu;
+
+}
+
+@media(max-width: 850px) {
+  .navigationMenu {
+    background-color: color-mix(in srgb, var(--bg-default) 90%, transparent);
+    width: 65%;
+    max-width: 20rem;
+
+  }
+
+  .hamburger {
+    display: inline;
+  }
+
+  .navigationMenu ul {
+    position: absolute;
+    top: 30px;
+    flex-direction: column;
+    max-width: 20rem;
+    background-color: color-mix(in srgb, var(--bg-default) 90%, transparent);
+    font-size: var(--fzmd);
+
+  }
+
+  .navigationMenu li {
+    font-size: var(--fzmd);
+    margin: 1rem 0rem 1rem 0rem;
+  }
+}
+
+.hamburger:hover {
+  color: var(--fg-accent1);
+  transition: all 500ms ease;
+
 }

@@ -6,21 +6,22 @@
   /* --dark1: #24292f; */
 
   /* background */
-  --bg-default: #24292f; 
+  --bg-default: #24292f;
   --bg-muted: #57606a;
   --bg-subtle: #6e7781;
-  --bg-onEmphasis: #24292f;
+  --bg-onEmphasis: #1c2128;
+
   /* foreground */
-  --fg-accent1:#17CFC5;
-  --fg-accent2:#CF4740;
-  --fg-accent3:#41CF17;
+  --fg-accent1: #17CFC5;
+  --fg-accent2: #CF4740;
+  --fg-accent3: #41CF17;
   --fg-default: #fafafa;
 
 
   /* TODO */
   --tabHeigth: 2.5rem;
   --tabHighlightWidth: 0.15rem;
-  --tabWidth: 10rem;
+  --tabWidth: 150px;
 
   --mainRed: #820801;
   --darkRed: #4F0501;
@@ -52,9 +53,9 @@
   --fzxxl: 32px;
   --fzheading: 12vh;
 
-  --tabHeigth: 2.5rem;
+  /* --tabHeigth: 2.5rem;
   --tabHighlightWidth: 0.15rem;
-  --tabWidth: 10rem;
+  --tabWidth: 10rem; */
 
 
   --max-width: 1100px;
@@ -75,8 +76,8 @@
       #0071ff33 160deg,
       transparent 360deg);
   --secondary-glow: radial-gradient(var(--foreground-accent1),
-    var(--foreground-accent2));
-      /* rgba(92, 115, 166, 0.64)); */
+      var(--foreground-accent2));
+  /* rgba(92, 115, 166, 0.64)); */
 
   /* --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
@@ -141,4 +142,28 @@ section {
   border: 0.08rem solid var(--lightTel);
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+@media (max-width: 850px) {
+
+  section {
+    width: 90vw;
+    margin: 1rem 5vw 0rem 5vw;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    /* TODO */
+    font-size: 0.9rem;
+
+  }
+
+  li {
+    font-size: 0.9rem;
+  }
+
+
 }

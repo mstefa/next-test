@@ -85,7 +85,7 @@ export default function Jobs() {
                         }
                       </h4>
                       <p className="styles.timeRange">{timeRange}</p>
-                      <ul> 
+                      <ul className={ styles.itemsList }> 
                         {itemsDescriptions && itemsDescriptions.map(i => {
                           return (
                             <li key={i.name}>{i.name}</li>

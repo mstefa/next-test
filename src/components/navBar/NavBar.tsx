@@ -2,9 +2,11 @@
 import React, { useEffect } from 'react'
 import styles from './navBar.module.scss'
 import Image from 'next/image'
+import { Icon } from '../icon/Icon';
 
 export default function NavBar() {
   const [hideNavBar, setHideNavBar] = React.useState(false);
+  const [isNavExpanded, setIsNavExpanded] = React.useState(false)
   
   useEffect(() => {
     
@@ -16,6 +18,7 @@ export default function NavBar() {
           setHideNavBar(false);
         } else {
           setHideNavBar(true)
+          setIsNavExpanded(false)
         }
         prevScrollpos = currentScrollPos;
     }
@@ -33,13 +36,22 @@ export default function NavBar() {
       </a>
       </div>
 
-      <ul>
-        {/* <li> Home </li> */}
-        <li  > <a href='#about'>About me</a> </li>
-        <li> <a href='#jobs'>Work</a> </li>
-        <li> <a href='#projects'>Projects</a> </li>
-        <li> <a href='#contact'>Contact</a></li>
-      </ul>      
+      <div className={isNavExpanded ? styles.navigationMenuExpanded : styles.navigationMenuHiden}>
+        <ul>
+          {/* <li> Home </li> */}
+          <li  > <a href='#about'>About me</a> </li>
+          <li> <a href='#jobs'>Work</a> </li>
+          <li> <a href='#projects'>Projects</a> </li>
+          <li> <a href='#contact'>Contact</a></li>
+        </ul> 
+      </div>
+
+      <button className={styles.hamburger}
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded)
+              }}>
+        <Icon size="large" icon="menu" ></Icon>
+      </button>     
   
     </nav>
   )

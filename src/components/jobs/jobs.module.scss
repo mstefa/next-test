@@ -18,6 +18,7 @@
   max-width: var(--maxWidth);
   display: flex;
 
+
   @media (max-width: 600px) {
     display: block;
   }
@@ -25,6 +26,15 @@
   // Prevent container from jumping
   @media (min-width: 700px) {
     min-height: 340px;
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
   }
 }
 
@@ -35,6 +45,7 @@
   padding: 0;
   margin: 0.5rem 0 0 0;
   list-style: none;
+
 
   @media(max-width: 600px) {
     display: flex;
@@ -55,6 +66,7 @@
     &:first-of-type {
       @media(max-width: 600px) {
         margin-left: 50px;
+        background-color: red;
       }
 
       @media(max-width: 480px) {
@@ -93,7 +105,7 @@
 
 
   @media(max-width: 600px) {
-    width: var(--tabWidth);
+    min-width: var(--tabWidth);
     padding: 0 15px;
     border-left: 0;
     border-bottom: var(--darkGray) solid;
@@ -137,9 +149,11 @@
     top: auto;
     bottom: 0;
     width: 100%;
-    max-width: var(--tabWidth);
+    width: var(--tabWidth);
     height: 2px;
-    margin-left: 50px;
+    margin-left: 5vw;
+    transform: translateX(calc(var(--activeTabId) * var(--tabWidth)));
+
     // transform: translateX(calc(${({ activeTabId })=> activeTabId}
 
     // * ${ tabWidth }));
