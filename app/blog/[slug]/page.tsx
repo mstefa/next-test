@@ -2,6 +2,7 @@ import { getSlug } from '@/src/infrastructure/file-managment/mdx-file-repository
 import React from 'react'
 import { MdxContent } from './MdxContent';
 import { getArticleBySlug } from '@/src/application/article.service';
+import styles from './slug.module.scss' 
 
 
 export default async function BlogsPage({params} :any) {
@@ -15,10 +16,9 @@ export default async function BlogsPage({params} :any) {
   const {metadata, serialized} = article!;
 
   return (
-    <>
-      <div className="article-container">
+      <div className={styles.blogPageContainer}>
         <h1 className="article-title">{metadata.title} </h1>
-        <p className="publish-date">
+        <p className={styles.date}>
           {metadata.publishedAt} &mdash;{' '}
           {metadata.readTime}
         </p>
@@ -28,8 +28,6 @@ export default async function BlogsPage({params} :any) {
 
         </div>
       </div>
-
-    </>
   )
 }
 

@@ -1,0 +1,17 @@
+.container {
+  max-width: var(--max-width);
+  background-color: var(--bg-onEmphasis);
+  border-radius: 1rem;
+  padding: 0.4rem 2rem 0.5rem 2rem;
+  margin: 2rem 0;
+}
+
+.summary {
+  font-size: var(--fzmd);
+  line-height: 140%;
+}
+
+.date {
+  color: var(--fg-subtle);
+  font-size: var(--fzxxs);
+}
