@@ -30,9 +30,9 @@ export default function NavBar() {
   return (
 
     <nav className={ hideNavBar? styles.navBarHidden: styles.navBar}>
-      <div>
+      <div className={styles.logoDiv}>
       <a href='#home'> 
-        <Image className={ styles.logo}id="logo" width="50" height="45" alt="Matias Stefanutti" src='/Icon2Small.png' />
+        <Image className={ styles.logo}id="logo" width="40" height="35" alt="Matias Stefanutti" src='/Icon2Small.png' />
       </a>
       </div>
 
