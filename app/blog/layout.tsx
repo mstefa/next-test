@@ -1,11 +1,11 @@
-import './globals.css'
+import '../globals.css'
 
 export const metadata = {
-  title: 'mstefa',
-  description: 'Matias Stefanutti personal web site',
+  title: 'mstefa blog',
+  description: 'Matias Stefanutti personal Blog',
 }
 
-export default function RootLayout({
+export default function BlogLayout({
   children,
 }: {
   children: React.ReactNode

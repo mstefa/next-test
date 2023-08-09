@@ -1,15 +1,17 @@
-.footer{
+.footer {
   /* margin: 0 auto; */
   font-size: 0.8rem;
-  text-align:center;
+  text-align: center;
   vertical-align: middle;
   min-height: 3rem;
   margin-bottom: 0.5rem;
-  p{
+
+  p {
     font-size: 0.9rem;
   }
+
   a:hover {
-    color: var(--lightTel);
+    color: var(--fg-accent1);
     transition: all 500ms ease;
   }
 }

@@ -6,7 +6,7 @@
     position: absolute;
     right: 0;
     padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid var(--lightTel);
+    border-bottom: 0.1rem solid var(--fg-accent1);
     width: 14rem;
     font-size: 1.3rem;
     margin: 1rem 0 1rem 0;
@@ -14,7 +14,7 @@
   }
 
   a:hover {
-    color: var(--lightTel);
+    color: var(--fg-accent1);
     transition: all 500ms ease;
   }
 
@@ -50,7 +50,7 @@
     }
 
     ;
-    color: var(--lightGray);
+    color: var(--fg-default);
     // padding: 0.2rem 1rem 0rem 0.1rem;
   }
 
@@ -67,17 +67,17 @@
 
     li::before {
       content: '> ';
-      color: var(--lightTel);
+      color: var(--fg-accent1);
     }
   }
 
   a {
-    color: var(--lightGray);
+    color: var(--fg-default);
     font-weight: lighter;
     margin: 0 0.4rem;
 
     :hover {
-      color: var(--lightTel);
+      color: var(--fg-accent1);
       transition: all 500ms ease;
     }
   }

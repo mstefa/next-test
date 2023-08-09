@@ -1,14 +1,73 @@
 ---
-title: "Example post one"
-published_at: "2022-02-16"
-excerpt: "example post one"
+title: "Solid"
+published_at: "2022-05-23"
+excerpt: "Solid es un acrónimo nemotécnico de cinco principios reconocidos para generar código autodocumentado, flexible y mantenible. Estos cincos principios son una selección de principios publicados por Robert C. Martin, en un artículo del 2000 titulado Design Principles and Design Patterns."
 cover_image: "path/to/where/image/is/stored"
 ---
 
-# Project 1
+Solid es un acrónimo nemotécnico de cinco principios reconocidos para generar código autodocumentado, flexible y mantenible. Estos cincos principios son una selección de principios publicados por Robert C. Martin, uncle Bob para los amigos 😜, en un artículo del 2000 titulado Design Principles and Design Patterns.
 
-something
+Si bien uncle Bob no invento estos principios, él fue quien los agrupo sistemáticamente. En su artículo que cualquier aplicación, por más eficiente o exitosa que sea en su tarea, siempre va a sufrir cambios a lo largo de su vida útil pudiendo ir degradándose, si no se siguen ciertos lineamientos para evitarlo.
 
-## second title
+## Los Cinco principios
 
-;lkjads
+### Single Responsibility:
+
+> “nunca debe haber más de una razón para que un módulo cambie”
+
+Este es el principio más sencillo de entender. Que haga una sola cosa, y la haga bien. Aunque es probable que diferentes personas pueden interpretarlo de diferente manera. Es decir, ¿como definimos una responsabilidad única?
+
+
+
+### Open/Closed Principle
+
+> “Un módulo debe estar abierto para la extensión, pero cerrado para la modificación”
+
+El ejemplo más tradicional es el siguiente. Supongamos que para un nuevo feature de nuestra app podemos reutilizar los métodos de una clase ya existente. Pero para nuestro nuevo caso también necesitamos agregar más funcionalidades a esta clase. Lo que este principio nos incita es a crear una nueva clase, heredando o componiendo la anterior para agregar funcionalidades, en lugar de modificarla la ya existente. De manera que reutilicemos el código (abierto a la extensión), sin modificarlo (cerrado para la modificación)
+
+### Liskov’s Substitution Principle:
+
+> “objetos de un programa deberían ser reemplazables por instancias de sus subtipos sin alterar el correcto funcionamiento del programa”
+
+Ahora se pone un poquito más complejo… por su nombre, que viene quien lo formulo por primera ves, Barbara Liskov, y porque es complicado de explicar en palabras, pero lo vamos a intentar…
+
+Supongamos que, por ejemplo, como leímos en open/close principle, extendimos la funcionalidad de una clase P, creando H a partir de P. Este principio nos dice que, si lo hacemos bien, debemos poder sustituir todas las instancias de P, con H. Es decir que la clase “hija” H no pierde o cambia la funcionalidad su clase padre P.
+
+### Interface segregation principle.
+
+> “muchas interfaces cliente específicas son mejores que una interfaz de propósito general”
+
+El objetivo de este principio es que ningún cliente dependa de métodos que no usa. Es decir que hay que evitar que cuando se implemente una interfaz hay que implementar muchísimos métodos que no son necesarios. En cambio, si podemos tratar de implementar muchas interfaces en la aplicación que si los necesite.
+
+### Dependency Inversion
+
+> “depender de abstracciones, no depender de implementaciones concretas”
+
+Esto es que los módulos de alto nivel no deberían depender de los de bajo nivel. Ambos deberían depender de abstracciones. La forma más clásica es apoyarse en interfaces, que definen un contrato, pero no implementan la lógica. Esto facilita la modificación y substitución de implementaciones
+
+
+## No seas STUPID!
+
+Así como tenemos reglas nemotécnicas para lo que hay que hacer, tenemos algunas para lo que hay que evitar. Una de ellas es STUPID, que es un conjunto de anti-patrones de los que hay que huir:
+
+* **Singleton**: Es su momento fue incentivado como un patrón de diseño que evita exponer los colaboradores de una clase. Y que hoy en día se lo ve como algo negativo ya que hace más difícil de detectar el acoplamiento entre clases. Se prefiere sustituir con una conveniente vía inyección de dependencias. Esto además facilita la testabilidad.
+
+* **Tight Coupling**: Acoplamiento entre clases que dificulta la mantenibilidad y tolerancia al cambio que proporciona la aplicación de principios SOLID
+
+* **Untestability**: Código difícil de testear, o código altamente acoplado que para poder testar se necesitan generar muchos mocks.
+
+* **Premature Optimization**: Sucede cuando se intentan anticipar requisitos de nuestro software desarrollando abstracciones innecesarias que añaden complejidad.
+
+* **Indescriptive Naming**: Nomenclatura poco descriptiva tanto a nivel de clases, como variables o atributos. Esta va en contra de lo que se conoce como Clean Code.
+
+* **Duplication**: Duplicidad de código. Algo que los principios SOLID tratan de solucionar.
+
+## Importancia e implementación
+
+Los principios de SOLID se han ganado mucha reputación y han demostrado que, si son bien implementados, permiten generar código mantenible, fácil de interpretar y escalable. Si bien los principios están basados en programación orientada a objetos, actualmente se extendido, con ciertas licencias, su significado a módulos más grandes, como un microservicio, o más pequeños, inclusos algunos pueden implementarse para funciones.
+
+También es cierto que generan cierto hype y que son preguntas estándares de entrevistas en empresas donde, a la hora de escribir código, no son tan tenidos en cuenta 🤷‍♂️. Vale la pena aclarar que estas reglas por si solas no aseguran un buen código. Otras reglas como las agrupadas en clean code u implementar patrones de diseño en casos concretos también ayudan a la mantenibilidad y escalabilidad del código. Al mismo tiempo que implementaciones demasiado meticulosas, puede llevar a complejizar demasiado un trabajo, o causar demoras innecesarias.
+
+Como siempre, hay que tener en cuenta el contexto y ver hasta qué nivel queremos desgranar una aplicación. Por ejemplo, la idea de “responsabilidad única” puede depender de que la interpretación que tenemos cada desarrollador. Por ejemplo, crear un servicio cuya única responsabilidad se cambiar el estado de una orden de compra. Esto puede parecer bastante bien en cierto contexto. Sin embargo, una aplicación de gestión de ventas el caso de uso “cambiar a estado aprobado” puede ser muy diferente del “cambiar a estado rechazado”. Las validaciones que necesitemos para ambos casos, o los eventos que podemos disparar luego de este cambio pueden ser muy diferentes. Tal vez una mejor aproximación sería una función con la única responsabilidad de aprobar ordenes de compras, y otra con la única responsabilidad de rechazarlos.
+
+Al final de cuentas nos encontramos que la aplicación de estos principios depende del contexto en que lo utilizamos y eso puede generar muchos dolores de cabezas.

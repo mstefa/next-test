@@ -25,12 +25,6 @@
     margin: 0.5rem 0 0 0;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    // background-image: var(--secondary-glow);
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // -moz-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // -moz-text-fill-color: transparent;
     animation-duration: var(--animationTime);
     animation-name: slideInX;
   }
@@ -74,23 +68,9 @@
 }
 
 .arrow {
-  // text-align: center;
-  // justify-content: center;
-  // width: 100%;
-
   margin: auto;
-  // position: absolute;
   top: 90%;
-  // animation: pulse 1s infinite;
   animation: var(--animationTime) infinite alternate bounce;
-  // svg {
-  //   animation-name: ;
-  //   animation-duration: 1s;
-  //   animation-iteration-count: infinite;
-  // }
-
-  // -ms-transform: translateY(-50%);
-  // transform: translateY(-50%);
 }
 
 @keyframes bounce {
