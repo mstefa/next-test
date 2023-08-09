@@ -1,6 +1,5 @@
 import arrowLeft from "./arrow-left.svg";
 import arrowRight from "./arrow-right.svg";
-import brand from "./brand.svg";
 import check from "./check.svg";
 import chevronDown from "./chevron-down.svg";
 import chevronRight from "./chevron-right.svg";
@@ -24,7 +23,6 @@ import twitter from "./twitter.svg";
 export {
   arrowLeft,
   arrowRight,
-  brand,
   check,
   chevronDown,
   chevronRight,
