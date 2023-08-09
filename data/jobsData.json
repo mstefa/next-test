@@ -1,0 +1,161 @@
+[
+  {
+    "id": 5,
+    "company": "InnoIT Consulting",
+    "title": "SSr Backend Developer",
+    "companyWebSite": "https://www.linkedin.com/company/innoit-consulting/",
+    "timeRange": "02-2022 -> 03-2023",
+    "shortDescription": "Typescript Backend Developer creating high-quality platforms",
+    "itemsDescriptions": [
+      {
+        "name": "Backend Developer with Typescript, creating high-quality platforms for a seamless user experience."
+      },
+      {
+        "name": "Improving customer relationships through innovative platforms."
+      },
+      {
+        "name": "Improving platform quality and performance for an efficient user experience."
+      }
+    ],
+    "usedSkills": [
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "Microservices"
+      },
+      {
+        "name": "Microsoft Azure"
+      },
+      {
+        "name": "Microsoft Bot Framework"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "company": "Settle Network",
+    "title": "SSr Backend Developer",
+    "companyWebSite": "https://www.settlenetwork.com/",
+    "timeRange": "02-2022 -> 03-2023",
+    "shortDescription": "Member of the backend team of a fintech and crypto project",
+    "itemsDescriptions": [
+      {
+        "name": "Build and develop a new fiat and crypto wallet project as a Backend Developer, utilizing JavaScript and Typescript, and taking on modular responsibility for backend development"
+      },
+      {
+        "name": "Work in a small start-up environment, and an eagerness to take on challenges such as reducing infrastructure costs and learning about crypto technologies"
+      },
+      {
+        "name": "Collaborate with a team of developers to deliver high-quality backend systems, ensuring seamless functionality of the fiat and crypto wallet project."
+      }
+    ],
+    "usedSkills": [
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "Microservices"
+      },
+      {
+        "name": "Crypto currencies"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "company": "Mercado Libre",
+    "title": "Software Engineer Analyst",
+    "companyWebSite": "https://mercadolibre.com/",
+    "timeRange": "05-2021 -> 02-2022",
+    "shortDescription": "Part of the CX-IT team",
+    "itemsDescriptions": [
+      {
+        "name": "Replacing the old legacy monolith chat application services with a micro-services structure"
+      },
+      {
+        "name": "Mantining communication channels applications, such as phone call and Whatsapp integrations"
+      },
+      {
+        "name": "Manage and implement changes to improve resiliency"
+      },
+      {
+        "name": "Keep updated infrastructure in AWS stacks"
+      }
+    ],
+    "usedSkills": [
+      {
+        "name": "GoLang"
+      },
+      {
+        "name": "Java"
+      },
+      {
+        "name": "Microservices"
+      },
+      {
+        "name": "Hexagonal Architecture"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "company": "Henry",
+    "title": "Teaching Assistant",
+    "companyWebSite": "https://www.soyhenry.com/",
+    "timeRange": "05-2021 -> 07-2021",
+    "shortDescription": "Part-time",
+    "itemsDescriptions": [
+      {
+        "name": "Supporting a designated group of students undertaking teacher designated activities"
+      },
+      {
+        "name": "Promote their own continuous professional development, and engage enthusiastically with the processes of become a developer."
+      }
+    ],
+    "usedSkills": [
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Node"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "company": "Previous Experience",
+    "title": "Aeronautical Engineer",
+    "companyWebSite": "",
+    "timeRange": "2012 -> 2020",
+    "shortDescription": "Full-time",
+    "itemsDescriptions": [
+      {
+        "name": "working in main players of industries like Siemens and Airbus"
+      },
+      {
+        "name": "Leading multidisciplinary team on differents sites"
+      },
+      {
+        "name": "Negotiations with customers and contractors"
+      }
+    ],
+    "usedSkills": [
+      {
+        "name": "multicultural working environment"
+      },
+      {
+        "name": "Project Management"
+      },
+      {
+        "name": "Leadership"
+      }
+    ]
+  }
+]

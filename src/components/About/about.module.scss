@@ -1,7 +1,11 @@
 .aboutSection {
 
   min-height: 25rem;
+  margin: 1rem auto;
   text-align: left;
+  max-width: var(--maxWidth);
+  display: flex;
+  flex-direction: column;
 
   @keyframes slideIn {
     from {
@@ -15,46 +19,27 @@
     }
   }
 
-  h2 {
-    animation-duration: var(--animationTime);
-    animation-name: slideIn;
-  }
-
   div {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     animation-duration: var(--animationTime);
     animation-name: slideIn;
 
     div {
-      /* flex-basis: 60%; */
       max-width: 60%;
-      margin: 0 2rem 0 2rem;
-      /* background-color:red; */
       display: flex;
       flex-direction: column;
 
       p {
-        margin: 0.1rem;
+        font-size: var(--fzsm);
+        margin: 0.5rem 0 0.5rem 0;
+        line-height: 140%;
       }
 
       a {
         color: var(--lightTel)
       }
-
-      ul {
-        columns: 3;
-
-        li {
-          list-style: none;
-        }
-
-        li::before {
-          content: '> ';
-          color: var(--lightTel)
-        }
-      }
-
     }
 
 
@@ -68,13 +53,10 @@
     align-content: center;
 
     img {
-      width: 15rem;
+      width: 19rem;
       height: 19rem;
-      padding-bottom: 0.3rem;
-      padding-right: 0.3rem;
-      border-bottom: 0.1rem solid;
-      border-right: 0.1rem solid;
-      border-color: var(--lightTel)
+      border-radius: 0.5rem;
+      box-shadow: 5px 5px var(--bg-muted);
     }
 
     button {
@@ -83,20 +65,25 @@
   }
 
   @media(max-width: 850px) {
+
     div {
       .textContainer {
-        /* flex-basis: 60%; */
+        flex-basis: 100%;
+        width: 100%;
         max-width: 100%;
         margin: 0 0.5rem 0 0.5rem;
+        order: 2;
+      }
 
-        ul {
-          columns: 2;
+      .imgContainer {
+        width: 100%;
+        order: 1;
+
+        button {
+          width: 100%;
         }
       }
 
-      :first-child {
-        order: 1;
-      }
 
     }
 

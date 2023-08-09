@@ -1,0 +1,33 @@
+.customIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+
+  >svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--small {
+    @extend .customIcon;
+    --icon-size: 1.25rem;
+  }
+
+  &--medium {
+    @extend .customIcon;
+    --icon-size: 1.75rem;
+  }
+
+  &--large {
+    @extend .customIcon;
+    --icon-size: 2.25rem;
+  }
+
+  &--xl {
+    @extend .customIcon;
+    --icon-size: 20.5rem;
+  }
+}

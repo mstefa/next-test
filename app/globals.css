@@ -1,10 +1,33 @@
 :root {
 
+  /* Cleaned */
+
+  --dark1: #24292f;
+  /* --dark1: #24292f; */
+
+  /* background */
+  --bg-default: #24292f;
+  --bg-muted: #57606a;
+  --bg-subtle: #6e7781;
+  --bg-onEmphasis: #1c2128;
+
+  /* foreground */
+  --fg-accent1: #17CFC5;
+  --fg-accent2: #CF4740;
+  --fg-accent3: #41CF17;
+  --fg-default: #fafafa;
+
+
+  /* TODO */
+  --tabHeigth: 2.5rem;
+  --tabHighlightWidth: 0.15rem;
+  --tabWidth: 150px;
 
   --mainRed: #820801;
   --darkRed: #4F0501;
   --ultraDarkRed: #2f0d0a;
-  --backgroundRed: #111010;
+  --backgroundRed: #181119;
+  --backgroundRed30opacity: #111010ae;
   --lightRed: #CF4740;
   --lightTel: #17CFC5;
   --darkTel: #06625C;
@@ -13,6 +36,10 @@
   --lightGray: #F2F2F2;
   --mediumGray: #888888;
   --darkGray: #262626;
+  /* --foreground-rgb: 255, 255, 255; */
+  /* --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0; */
+
 
   --maxWidth: 70rem;
   --animationTime: 1.5s;
@@ -24,17 +51,23 @@
   --fzlg: 28px;
   --fzxl: 30px;
   --fzxxl: 32px;
-  --fzheading: 42px;
+  --fzheading: 12vh;
+
+  /* --tabHeigth: 2.5rem;
+  --tabHighlightWidth: 0.15rem;
+  --tabWidth: 10rem; */
+
 
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  /* --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace; */
+  /* TODO  optimize fonts*/
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* --foreground-rgb: 0, 0, 0; */
+  /* --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
 
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
@@ -42,10 +75,11 @@
       #54d6ff33 120deg,
       #0071ff33 160deg,
       transparent 360deg);
-  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 0));
+  --secondary-glow: radial-gradient(var(--foreground-accent1),
+      var(--foreground-accent2));
+  /* rgba(92, 115, 166, 0.64)); */
 
-  --tile-start-rgb: 239, 245, 249;
+  /* --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
   --tile-border: conic-gradient(#00000080,
       #00000040,
@@ -53,60 +87,34 @@
       #00000020,
       #00000010,
       #00000010,
-      #00000080);
+      #00000080); */
 
-  --callout-rgb: 238, 240, 241;
+  /* --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --card-border-rgb: 131, 134, 135; */
+  color: var(--lightGray)
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(to bottom right,
-        rgba(1, 65, 255, 0),
-        rgba(1, 65, 255, 0),
-        rgba(1, 65, 255, 0.3));
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(#ffffff80,
-        #ffffff40,
-        #ffffff30,
-        #ffffff20,
-        #ffffff10,
-        #ffffff10,
-        #ffffff80);
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html {
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
+  /* color: rgb(var(--foreground-rgb)); */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
+  /* TODO  optimize fonts*/
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-default);
+  /* background: (to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
 }
 
 a {
@@ -114,8 +122,46 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+} */
+
+section {
+  width: 80vw;
+  margin: 1rem 10vw 0rem 10vw;
+}
+
+
+
+.mainButton {
+
+  background-color: var(--bg-onEmphasis);
+  color: var(--lightTel);
+  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  border: 0.08rem solid var(--lightTel);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+
+  section {
+    width: 90vw;
+    margin: 1rem 5vw 0rem 5vw;
+  }
+
+  p {
+    /* TODO */
+    font-size: 0.9rem;
+
+  }
+
+  li {
+    font-size: 0.9rem;
+  }
+
+
 }

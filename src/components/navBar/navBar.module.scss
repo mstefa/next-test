@@ -1,0 +1,144 @@
+// @import "transparentize"
+
+.navBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  background-color: color-mix(in srgb, var(--bg-default) 90%, transparent);
+  transition: top 0.5s;
+
+  @keyframes fade {
+    from {
+      opacity: 0%;
+    }
+
+    to {
+      opacity: 100%;
+    }
+  }
+
+  a {
+    margin: 0.5rem 0 0.5rem 2rem;
+    animation-duration: var(--animationTime);
+    animation-name: fade;
+  }
+
+  ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    margin-right: 2rem;
+    font-size: 1.1rem;
+
+    li {
+      margin-left: 2rem;
+      padding: 0 0.1rem;
+      animation-duration: var(--animationTime);
+      animation-name: fade;
+
+      a:hover {
+        color: var(--lightTel);
+        transition: all 500ms ease;
+      }
+
+      ::before {
+        content: '> ';
+        color: var(--lightTel);
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+
+  &Hidden {
+    @extend .navBar;
+    top: -5rem;
+    transition: top 1s;
+  }
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+  background-color: var(--bg-default);
+  color: var(--fg-default)
+}
+
+
+.navigationMenuHiden {
+  @extend .navigationMenu;
+
+  // display: none;
+  @media(max-width: 850px) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+  }
+}
+
+.navigationMenuExpanded {
+  @extend .navigationMenu;
+
+}
+
+@media(max-width: 850px) {
+
+  .navigationMenu {
+    background-color: color-mix(in srgb, var(--bg-default) 90%, transparent);
+    width: 65%;
+    max-width: 20rem;
+
+    ul {
+      position: absolute;
+      top: 30px;
+      flex-direction: column;
+      max-width: 20rem;
+      background-color: color-mix(in srgb, var(--bg-default) 90%, transparent);
+      font-size: var(--fzmd);
+
+      li {
+        margin: 0.5rem 2rem 0.5rem 0rem;
+      }
+    }
+
+
+  }
+
+  .hamburger {
+    display: inline;
+  }
+
+  // .navigationMenu ul {
+  //   position: absolute;
+  //   top: 30px;
+  //   flex-direction: column;
+  //   max-width: 20rem;
+  //   background-color: color-mix(in srgb, var(--bg-default) 90%, transparent);
+  //   font-size: var(--fzmd);
+
+  // }
+
+  .navigationMenu li {
+    font-size: var(--fzmd);
+    margin: 1rem 0rem 1rem 0rem;
+  }
+}
+
+.hamburger:hover {
+  color: var(--fg-accent1);
+  transition: all 500ms ease;
+
+}

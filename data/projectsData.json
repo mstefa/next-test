@@ -1,0 +1,74 @@
+{
+  "_comment": " recopilatory information of project built by me. TECHNOLOGIES: main tech used (no more that 5), MAIN: will be show in main project, if not it will be show on a second part. SHOW: if false will not be render",
+  "projects": [
+    {
+      "id": 4,
+      "name": "Sneakers shop",
+      "description": "It is a project launched in just one month and carried out by a team of nine developers. The aim of the project was to create an e-commerce from scratch as a final project of the Henry Bootcamp. On it, it was decided to use TypeScript and GraphQL.",
+      "technologies": [
+        "TypeScipt",
+        "React",
+        "GraphQL",
+        "Express",
+        "Sequelize"
+      ],
+      "img": "/images/Sneakers.webp",
+      "repository": "https://github.com/mstefa/sneakersShop",
+      "page": "https://shoes-g1.vercel.app/",
+      "year": 2021,
+      "main": true,
+      "show": true
+    },
+    {
+      "id": 3,
+      "name": "PokeApp",
+      "description": "A individual project of a complete app, including the API and the client. Its aim was to create an interactive database for Pokémon’s fans implementing the technologies learned at Henry Bootcamp.",
+      "technologies": [
+        "React",
+        "Redux",
+        "Node",
+        "Express",
+        "Sequelize"
+      ],
+      "img": "/images/pokemon.gif",
+      "repository": "https://github.com/mstefa/PokeApp",
+      "page": "https://poke-app-blue.vercel.app/",
+      "year": 2021,
+      "main": true,
+      "show": true
+    },
+    {
+      "id": 2,
+      "name": "Movies App",
+      "description": "A nice project that permit to find all movies saved on the OMDb API and save your favorite ones ",
+      "technologies": [
+        "React",
+        "Redux",
+        "React-Router",
+        "CSSModules"
+      ],
+      "img": "/images/movie.gif",
+      "repository": "https://github.com/mstefa/MoviesApp",
+      "page": "",
+      "year": 2021,
+      "main": true,
+      "show": true
+    },
+    {
+      "id": 1,
+      "name": "Weather App",
+      "description": "My first project using React.js. It allow to get Weather Data from any city in the world",
+      "technologies": [
+        "React",
+        "React-Router",
+        "CSSModules"
+      ],
+      "img": "/images/weather.gif",
+      "repository": "https://github.com/mstefa/Weather-Web-App",
+      "page": "https://mstefa.github.io/Weather-Web-App/",
+      "year": 2021,
+      "main": true,
+      "show": true
+    }
+  ]
+}
