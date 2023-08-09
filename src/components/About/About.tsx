@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './about.module.scss'
 import { Icon } from '../icon/Icon'
+import { SectionTitle } from '../atoms/section-title/SectionTitle'
 
 export default function About() {
   return (
     <section className={styles.aboutSection} >
-      <h2  id='about'> <Icon icon='paperPlane'></Icon> About Me</h2>
+      <SectionTitle>About Me</SectionTitle>
       <div >
         <div className={styles.textContainer}>
           <p>
@@ -22,7 +23,7 @@ export default function About() {
         </div>
         <div className={styles.imgContainer}>
           <img src='/images/profilePic.webp' alt='profile'></img>
-          <a href='https://mstefanutti-site.s3.us-east-2.amazonaws.com/MatiasStefanuttiResume.pdf' target="blank" > <button className='mainButton' >Resume</button> </a>
+          <a href='https://drive.google.com/uc?export=download&id=1MefuFpnNeeRATLesxyDzKNAkfP0jxA_T' target="blank" > <button className='mainButton' >Resume</button> </a>
 
         </div>
       </div>

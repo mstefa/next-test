@@ -1,5 +1,8 @@
 .container {
   padding: 6rem 0rem 10rem 0rem;
+  margin: 0rem auto;
+  max-width: var(--maxWidth);
+
   display: flex;
   flex-direction: column;
   height: 100vh;

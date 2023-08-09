@@ -133,6 +133,8 @@ section {
   margin: 1rem 10vw 0rem 10vw;
 }
 
+
+
 .mainButton {
 
   background-color: var(--bg-onEmphasis);
@@ -149,12 +151,6 @@ section {
   section {
     width: 90vw;
     margin: 1rem 5vw 0rem 5vw;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    color: var(--fg-default);
-    display: flexs
   }
 
   p {

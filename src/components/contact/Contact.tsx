@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './contact.module.scss'
 import { Icon } from '../icon/Icon'
+import { SectionTitle } from '../atoms/section-title/SectionTitle'
 
 export default function Contact() {
   return (
     <section className={styles.contact}>
-      <h2 id='contact'> Get In Touch</h2>
+      <SectionTitle>Get In Touch</SectionTitle>
       <div className={styles.contactContainer}>
         <p> Whether you have a question or just want to say hi, feel free to send me an email:</p>
         <a href='mailto:mstefanutti24@gmail.com' target="blank" > 

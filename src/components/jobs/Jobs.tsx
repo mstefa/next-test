@@ -2,6 +2,7 @@
 import {useState, useEffect, useRef} from 'react'
 import styles from './jobs.module.scss'
 import { getJobs } from '@/src/infrastructure/JobRepository';
+import { SectionTitle } from '../atoms/section-title/SectionTitle';
 
 
 export default function Jobs() {
@@ -38,7 +39,7 @@ export default function Jobs() {
 
   return (
     <section className={styles.jobSection }>
-        <h2 id='jobs'> Where I’ve Worked</h2>
+      <SectionTitle>Where I’ve Worked</SectionTitle>
         <div className={styles.inner }>
           <div className={styles.tabList }>
           {jobsData && jobsData.map((e, i) => {

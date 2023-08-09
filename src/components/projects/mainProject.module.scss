@@ -45,10 +45,8 @@
     border-radius: 5px;
 
     p {
-      // min-height: 8rem;
+      // TODO parameter this
       font-weight: 500;
-      // color: var(--bg-default);
-      // background-color: color-mix(in srgb, var(--bg-muted) 95%, transparent);
     }
 
     ;
@@ -120,7 +118,12 @@
 
       // TODO check width
       // height: fit-content; //TODO
-      text-align: left;
+
+      div {
+        display: flex;
+        flex-direction: row-reverse;
+
+      }
     }
 
   }
