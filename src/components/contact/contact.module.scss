@@ -30,13 +30,13 @@
 
     a {
       font-size: 1.5rem;
-      color: var(--fg-default);
+      color: var(--lightGray);
       /* margin: 20rem auto; */
       margin: 0;
       padding: 0;
 
       :hover {
-        color: var(--fg-accent1);
+        color: var(--lightTel);
         transition: all 500ms ease;
       }
     }

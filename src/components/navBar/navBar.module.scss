@@ -47,13 +47,13 @@
       animation-name: fade;
 
       a:hover {
-        color: var(--fg-accent1);
+        color: var(--lightTel);
         transition: all 500ms ease;
       }
 
       ::before {
         content: '> ';
-        color: var(--fg-accent1);
+        color: var(--lightTel);
         padding: 0 0.5rem;
       }
     }

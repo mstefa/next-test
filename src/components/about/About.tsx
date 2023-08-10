@@ -9,7 +9,7 @@ export default function About() {
       <SectionTitle>About Me</SectionTitle>
       <div >
         <div className={styles.textContainer}>
-        <p>
+          <p>
             I am an experienced Software Engineer, adept at creating exceptional platforms that offer exceptional user experiences. My expertise lies in backend development, where I&apos;ve utilized languages such as <b>TypeScript</b>, <b>GoLang</b>, and <b>Java </b> to architect innovative microservices. Additionally, I possess frontend proficiency with <b>React</b>. I&apos;m motivated for  elevate platform quality and performance while cultivating robust customer relationships through cutting-edge solutions.
           </p>
           <p>

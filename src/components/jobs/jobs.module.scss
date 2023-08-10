@@ -97,7 +97,7 @@
   border: 0;
   border-left: var(--darkGray) solid;
   background-color: transparent;
-  color: var(--fg-default);
+  color: var(--lightGray);
 
   @media(max-width: 768px) {
     padding: 0 15px 2px;
@@ -119,7 +119,7 @@
 
   &Active {
     @extend .tabButton;
-    color: var(--fg-accent1);
+    color: var(--lightTel);
     // border-left: var(--tabHighlightWidth) solid;
 
     @media(max-width: 600px) {
@@ -139,7 +139,7 @@
   width: var(--tabHighlightWidth);
   height: var(--tabHeigth);
   border-radius: 0.3rem;
-  background: var(--fg-accent1);
+  background: var(--lightTel);
   transform: translateY(calc(var(--activeTabId) * var(--tabHeigth)));
 
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -180,7 +180,7 @@
 
   .timeRange {
     margin-bottom: 25px;
-    color: var(--fg-accent1);
+    color: var(--lightTel);
     font-size: var(--fzxs);
   }
 
@@ -192,7 +192,7 @@
     line-height: 1.3;
 
     a {
-      color: var(--fg-accent1);
+      color: var(--lightTel);
     }
   }
 
@@ -208,7 +208,7 @@
 
     li::before {
       content: '> ';
-      color: var(--fg-accent1);
+      color: var(--lightTel);
     }
   }
 
@@ -228,6 +228,6 @@
 
   li::before {
     content: '# ';
-    color: var(--fg-accent1);
+    color: var(--lightTel);
   }
 }

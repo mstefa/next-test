@@ -1,5 +1,5 @@
 import React from 'react'
-import { getArticlesMetadata } from '../../src/application/article.service'
+import { getArticlesMetadata } from '@/src/application/article.service'
 import NavBar from '@/src/components/navBar/NavBar';
 import styles from './page.module.scss'
 import { ArticleCard } from '@/src/components/article-card/ArticleCard';

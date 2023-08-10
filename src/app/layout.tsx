@@ -1,5 +1,3 @@
-import './globals.css'
-
 export const metadata = {
   title: 'mstefa',
   description: 'Matias Stefanutti personal web site',
