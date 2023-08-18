@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export',
+  output: 'export',
   images: { unoptimized: true }, // not compatible with output: export
-  basePath: '/TODO--',
+  basePath: 'https://mstefa.github.io/next-test/',
   experimental: {
     mdxRs: true,
   },
