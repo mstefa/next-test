@@ -22,7 +22,7 @@ export default function About() {
 
         </div>
         <div className={styles.imgContainer}>
-          <img src='/images/profilePic.webp' alt='profile'></img>
+          <img src='./images/profilePic.webp' alt='profile'></img>
           <a href='https://drive.google.com/uc?export=download&id=1MefuFpnNeeRATLesxyDzKNAkfP0jxA_T' target="blank" > <button className='mainButton' >Resume</button> </a>
 
         </div>

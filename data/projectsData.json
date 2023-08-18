@@ -12,7 +12,7 @@
         "Express",
         "Sequelize"
       ],
-      "img": "/images/Sneakers.webp",
+      "img": "./images/Sneakers.webp",
       "repository": "https://github.com/mstefa/sneakersShop",
       "page": "https://shoes-g1.vercel.app/",
       "year": 2021,
@@ -30,7 +30,7 @@
         "Express",
         "Sequelize"
       ],
-      "img": "/images/pokemon.gif",
+      "img": "./images/pokemon.gif",
       "repository": "https://github.com/mstefa/PokeApp",
       "page": "https://poke-app-blue.vercel.app/",
       "year": 2021,
@@ -47,7 +47,7 @@
         "React-Router",
         "CSSModules"
       ],
-      "img": "/images/movie.gif",
+      "img": "./images/movie.gif",
       "repository": "https://github.com/mstefa/MoviesApp",
       "page": "",
       "year": 2021,
@@ -63,7 +63,7 @@
         "React-Router",
         "CSSModules"
       ],
-      "img": "/images/weather.gif",
+      "img": "./images/weather.gif",
       "repository": "https://github.com/mstefa/Weather-Web-App",
       "page": "https://mstefa.github.io/Weather-Web-App/",
       "year": 2021,
